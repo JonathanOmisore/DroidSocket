@@ -16,12 +16,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/portnumber"
-        android:layout_marginTop="141dp"
-        android:layout_marginLeft="119dp"
-        android:layout_marginStart="119dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/internalip"
+        android:layout_toLeftOf="@+id/progressBar"
+        android:layout_toStartOf="@+id/progressBar" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,8 +26,8 @@
         android:text="Enter port"
         android:id="@+id/textView2"
         android:layout_alignTop="@+id/portnumber"
-        android:layout_alignLeft="@+id/portnumber"
-        android:layout_alignStart="@+id/portnumber" />
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -49,8 +46,8 @@
         android:text="Listen"
         android:id="@+id/button"
         android:layout_below="@+id/portnumber"
-        android:layout_alignRight="@+id/textView2"
-        android:layout_alignEnd="@+id/textView2" />
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -71,5 +68,22 @@
         android:layout_toLeftOf="@+id/textView2"
         android:layout_toStartOf="@+id/textView2"
         android:visibility="invisible" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/internalip"
+        android:layout_below="@+id/progressBar"
+        android:layout_toLeftOf="@+id/progressBar"
+        android:layout_toStartOf="@+id/progressBar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Internal IP"
+        android:id="@+id/textView"
+        android:layout_below="@+id/progressBar"
+        android:layout_toLeftOf="@+id/progressBar"
+        android:layout_toStartOf="@+id/progressBar" />
 
 </RelativeLayout>

@@ -20,12 +20,13 @@ public class CreateServer extends Thread {
         }
     }
 
-    CreateServer(int port, TextView view, Button button){
+    CreateServer(int port, String internalip, TextView view, Button button){
         mbutton = button;
         mText = view;
         try{
             mbutton.setVisibility(View.INVISIBLE);
             serverSocket = new ServerSocket(port);
+            serverSocket.bind(new InetSocketAddress(internalip,port));
 
             clientSocket = serverSocket.accept();
             mText.setText("Received connection from " + clientSocket.getRemoteSocketAddress());

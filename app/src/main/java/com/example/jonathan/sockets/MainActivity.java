@@ -21,13 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         final EditText portinput = (EditText)findViewById(R.id.portnumber);
+        final EditText internalip = (EditText)findViewById(R.id.internalip);
         setSupportActionBar(toolbar);
         final TextView connection = (TextView) findViewById(R.id.connection);
         final Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CreateServer server = new CreateServer(Integer.parseInt(portinput.getText().toString()),connection, button);
+                CreateServer server = new CreateServer(Integer.parseInt(portinput.getText().toString()),internalip.getText().toString(),connection, button);
                 server.start();
                 connection.setVisibility(View.VISIBLE);
                 connection.setText("Waiting for a connection on port " + portinput.getText().toString());
